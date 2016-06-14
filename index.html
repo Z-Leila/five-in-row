@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>five-in-row</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./bower_components/jquery/dist/jquery.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+<body>
+<div class="box">
+  <canvas id="canvas" width="600" height="600"></canvas>
+  <div class="cartel">
+    <div class="tips">
+      <h6 id="tishi"></h6>
+      <i id="close"></i>
+      <span id="restart">再来一局</span>
+      <span id="qipu">生成棋谱</span>
+    </div>
+  </div>
+
+  <a id="save" href="" download="">保存棋谱</a>
+</div>
+  <audio id="black_play" src="./music/022.wav"></audio>
+  <audio id="white_play" src="./music/024.wav"></audio>
+</body>
+</html>
+
+
+
+
+
+<!-- 	<script>
+		var canvas = document.querySelector('#canvas');
+		var ctx = canvas.getContext('2d');
+		var huaqipan = function(){
+		ctx.clearRect(0,0,600,600);
+// 横线
+		ctx.save();	      
+	    for(var i = 0; i < 15; i ++){
+	    	ctx.save();
+	      	ctx.beginPath();
+	        ctx.translate(0,40);
+	        ctx.moveTo(0,0);
+	        ctx.lineTo(600,0);
+	        ctx.stroke();
+	        ctx.closePath();
+	      }
+	    ctx.restore();
+	// 竖线
+	    ctx.save();	  
+	    for(var i = 0; i < 15; i ++){
+	      	ctx.beginPath();
+	        ctx.translate(40,0);
+	        ctx.moveTo(0,0);
+	        ctx.lineTo(0,600);
+	        ctx.stroke();
+	        ctx.closePath();
+	      }
+	     ctx.restore();
+		}		
+		huaqipan();			
+	</script> -->

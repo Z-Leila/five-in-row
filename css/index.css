@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+@keyframes move {
+  0% {
+    background-position: 2000px 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2000px 0;
+  }
+}
+
+.box {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-image: url(../img/river.jpg);
+  animation: move 500s linear infinite;
+  z-index: -1;
+}
+
+#canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid black;
+  background: rgba(209, 158, 44, 0.39);
+}
+
+#save {
+  display: none;
+  padding: 30px;
+  background: #62a9ec;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.cartel {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+.cartel .tips:hover #close::after {
+  opacity: 1;
+  transform: none;
+}
+
+.cartel .tips {
+  width: 600px;
+  background: #fff;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.cartel .tips #close::after {
+  opacity: 0;
+  transform: scale(0.8, 0.8);
+  transition: transform .6s ease, opacity .6s ease;
+  content: 'X';
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  background: black;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-family: "consolas";
+}
+
+.cartel .tips span {
+  cursor: pointer;
+  margin-top: 130px;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background: #51b433;
+}
